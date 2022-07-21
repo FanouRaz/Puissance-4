@@ -59,7 +59,6 @@ def grilleRemplie(board):
             if board[r][c] == 0:
                isFull = False                 
                break
-    
     return isFull
 
 def next_open_row(grille, col):
@@ -104,7 +103,7 @@ while not isGameOver:
                if(grilleJeu[ROW -1][col] == 0):
                 row = next_open_row(grilleJeu, col)
                 grilleJeu[row][col] = 1         
-                print(f'({row},{col})')
+                #print(f'({row},{col})')
                 if victoire(grilleJeu,1):
                     label = font.render("victoire du joueur 1!!",1,(255,0,0))
                     screen.blit(label,(40,10))
@@ -116,7 +115,7 @@ while not isGameOver:
                 if(grilleJeu[ROW -1][col] == 0):
                     row = next_open_row(grilleJeu, col)
                     grilleJeu[row][col] = 2         
-                    print(f'({row},{col})')
+                    #print(f'({row},{col})')
                     if victoire(grilleJeu,2):
                         label = font.render("victoire du joueur 2!!",1,(255,255,0))
                         screen.blit(label,(40,10))
